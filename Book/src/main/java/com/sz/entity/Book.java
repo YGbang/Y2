@@ -8,6 +8,16 @@ public class Book {
     private  double discount;
     private  String publisher;
 
+    private  Booktwo booktwo;
+
+    public Booktwo getBooktwo() {
+        return booktwo;
+    }
+
+    public void setBooktwo(Booktwo booktwo) {
+        this.booktwo = booktwo;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -59,13 +69,9 @@ public class Book {
 
     @Override
     public String toString() {
-        return "book{" +
+        return "Book{" +
                 "id=" + id +
-                ", ISBN='" + ISBN + '\'' +
                 ", name='" + name + '\'' +
-                ", price=" + price +
-                ", discount=" + discount +
-                ", publisher='" + publisher + '\'' +
                 '}';
     }
 }

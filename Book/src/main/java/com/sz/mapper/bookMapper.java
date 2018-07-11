@@ -1,7 +1,6 @@
 package com.sz.mapper;
 
 import com.sz.entity.Book;
-import com.sz.entity.Book;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -19,6 +18,10 @@ public interface bookMapper {
      * @return
      */
     int  inserTive(Book b);
+
+
+    Book selectByPrimaryKey(@Param("id")  Integer id);
+
 
 
 }

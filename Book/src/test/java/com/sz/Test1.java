@@ -2,6 +2,7 @@ package com.sz;
 
 import com.sz.entity.Book;
 import com.sz.mapper.bookMapper;
+import com.sz.mapper.booktwoMapper;
 import com.sz.utils.MyBatisUtil;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.jdbc.SQL;
@@ -130,18 +131,9 @@ public class Test1 {
         }
     }
 
-    @Test
-    public void m3(){
 
-        SqlSession sqlSession=MyBatisUtil.createSqlSession();
-        bookMapper mapper =sqlSession.getMapper(bookMapper.class);
-        Book b=new Book();
-        b.setId(1);
-        mapper.inserTive(b);
-        sqlSession.commit();
-        sqlSession.close();
 
-    }
+
 
 
 }

@@ -55,5 +55,21 @@ namespace要和我们的dao的接口进行绑定
     </delete>
 
 
+    <resultMap id="baseMap" type="com.sz.entity.Book">
+            <id property="id" column="id"/>
+            <result property="name" column="name"/>
+            <result property="booktwo.authorid" column="authorid"/>
+            <result property="booktwo.authorliu" column="authorliu"/>
+    </resultMap>
+
+    <select id="selectByPrimaryKey" resultMap="baseMap">
+        SELECT bookone.`id`,booktwo.`authorid`,bookone.`name`,booktwo.`authorliu`
+        FROM bookone ,booktwo
+        WHERE bookone.id=booktwo.`authorid` AND bookone.`id`=#{id}
+    </select>
+
+
+
+
 
 </mapper>
