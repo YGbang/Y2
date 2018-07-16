@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+
+    <bean class="com.sz.old.bean.Girl" id="girl" name="goodgirl">
+        <property name="color" value="黄色"></property>
+        <property name="name" value="马慧敏"></property>
+        <property name="num" value="6"></property>
+
+    </bean>
+
+
+</beans>
