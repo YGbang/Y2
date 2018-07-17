@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean class="com.sz.bean.Girl" id="girl">
+        <property name="friends">
+            <array>
+                <value>老马</value>
+                <value>小马</value>
+                <value>大马</value>
+                <value>细马</value>
+            </array>
+        </property>
+    </bean>
+
+    <bean class="com.sz.bean.Girl" id="gir2" parent="girl">
+        <property name="nos">
+            <list>
+                <value>11</value>
+                <value>12</value>
+                <value>13</value>
+                <value>14</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="com.sz.bean.Girl" id="gir3" parent="gir2">
+        <property name="books">
+            <set>
+                <bean class="com.sz.bean.Book">
+                    <property name="name" value="如何成为帅哥"/>
+                    <property name="price" value="999"/>
+                </bean>
+                <bean class="com.sz.bean.Book">
+                    <property name="name" value="如何成为美女"/>
+                    <property name="price" value="1000"/>
+                </bean>
+            </set>
+        </property>
+    </bean>
+
+    <bean class="com.sz.bean.Girl" id="gir4" parent="gir3">
+        <property name="favorateFoods">
+            <map>
+                <entry key="f01">
+                    <bean class="com.sz.bean.Food">
+                        <property name="name" value="香蕉"/>
+
+                    </bean>
+
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+
+</beans>

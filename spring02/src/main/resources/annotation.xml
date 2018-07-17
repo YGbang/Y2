@@ -21,12 +21,11 @@
 
 
 
-    <bean class="com.sz.old.bean.Girl" id="girl" name="goodgirl">
-        <property name="color" value="黄色"></property>
-        <property name="name" value="马慧敏"></property>
-        <property name="num" value="6"></property>
 
-    </bean>
+    <context:component-scan base-package="com.sz">
+
+    </context:component-scan>
+
 
 
 </beans>

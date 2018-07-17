@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+    <bean class="com.sz.bean.Book" id="book" init-method="init" scope="singleton"
+    destroy-method="destroy">
+        <property name="name" value="如何成为像马马那么成功的人"/>
+        <property name="price" value="99"/>
+    </bean>
+
+    <bean class="com.sz.bean.Book" id="book2" init-method="init" scope="prototype">
+        <property name="name" value="老马要开始赚钱了，要多学习"/>
+        <property name="price" value="60"/>
+    </bean>
+
+
+
+</beans>
